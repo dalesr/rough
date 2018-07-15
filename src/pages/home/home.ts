@@ -8,10 +8,10 @@ import { Storage } from '@ionic/storage';
 declare var google;
  
 @Component({
-  selector: 'map-home',
-  templateUrl: 'map.html'
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
-export class MapPage {
+export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   currentMapTrack = null;
@@ -53,5 +53,53 @@ export class MapPage {
         this.previousTracks = data;
       }
     });
+  }
+
+  startTracking() {
+    this.isTracking = true;
+    this.trackedRoute = [];
+ 
+    this.positionSubscription = this.geolocation.watchPosition()
+      .pipe(
+        filter((p) => p.coords !== undefined) //Filter Out Errors
+      )
+      .subscribe(data => {
+        setTimeout(() => {
+          this.trackedRoute.push({ lat: data.coords.latitude, lng: data.coords.longitude });
+          this.redrawPath(this.trackedRoute);
+        }, 0);
+      });
+ 
+  }
+ 
+  redrawPath(path) {
+    if (this.currentMapTrack) {
+      this.currentMapTrack.setMap(null);
+    }
+ 
+    if (path.length > 1) {
+      this.currentMapTrack = new google.maps.Polyline({
+        path: path,
+        geodesic: true,
+        strokeColor: '#ff00ff',
+        strokeOpacity: 1.0,
+        strokeWeight: 3
+      });
+      this.currentMapTrack.setMap(this.map);
+    }
+  }
+
+  stopTracking() {
+    let newRoute = { finished: new Date().getTime(), path: this.trackedRoute };
+    this.previousTracks.push(newRoute);
+    this.storage.set('routes', this.previousTracks);
+   
+    this.isTracking = false;
+    this.positionSubscription.unsubscribe();
+    this.currentMapTrack.setMap(null);
+  }
+   
+  showHistoryRoute(route) {
+    this.redrawPath(route);
   }
 }

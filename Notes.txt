@@ -1,0 +1,41 @@
+ <ion-item>
+      <ion-label>Log Tracks</ion-label>
+      <ion-toggle [(ngModel)]="logtracks"></ion-toggle>
+    </ion-item>
+        
+    <ion-item>
+      <ion-label>Show Tracks</ion-label>
+      <ion-toggle [(ngModel)]="showtracks"></ion-toggle>
+    </ion-item>
+  
+  </ion-list>
+
+Map
+
+<ion-view>
+    <ion-content>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+</ion-view>
+
+.list-header{
+    color: black;
+}
+
+<ion-list radio-group [(ngModel)]="latlong">
+    <ion-list-header>
+      Lat/Long Format:
+    </ion-list-header>
+    <ion-col>
+      <ion-item>
+        <ion-label>35.98651900&emsp;-94.05674376</ion-label>
+        <ion-radio value="latlong1"></ion-radio>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label>N35&deg; 59.191' &emsp; W94&deg; 3.405'</ion-label>
+        <ion-radio value="latlong2">
+        </ion-radio>
+      </ion-item>
+    </ion-col>

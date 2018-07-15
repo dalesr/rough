@@ -41,3 +41,16 @@ Map
     </ion-col>
 
     This is a change to the note.txt
+July 15, 2018
+
+      npm ls hoek
+rough@0.0.1 C:\Users\tomsr\projects\rough
+`-- @ionic/app-scripts@3.1.10
+  `-- node-sass@4.9.0
+    `-- request@2.79.0
+      `-- hawk@3.1.3
+        +-- boom@2.10.1
+        | `-- hoek@2.16.3  deduped
+        +-- hoek@2.16.3
+        `-- sntp@1.0.9
+          `-- hoek@2.16.3  deduped

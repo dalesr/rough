@@ -1,12 +1,21 @@
 page-info {
     .label{
         display: block;
-    font-size: 1.17em;
-    margin-top: .75em;
-    margin-bottom: .75em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+        font-size: 1.17em;
+        margin-top: .75em;
+        margin-bottom: .75em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
     }
 
+    .left {
+        width: 50%;
+        float: left;
+    }
+
+    .right {
+        width: 50%;
+        float: right;
+    }
 }

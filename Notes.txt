@@ -54,3 +54,7 @@ rough@0.0.1 C:\Users\tomsr\projects\rough
         +-- hoek@2.16.3
         `-- sntp@1.0.9
           `-- hoek@2.16.3  deduped
+
+           <br>
+  <button ion-button style="color:black" round>Copy POS</button>
+  <button ion-button style="color:black" round>Share POS</button>

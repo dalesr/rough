@@ -5,42 +5,29 @@
 </ion-header>
 
 <ion-content class="bg-style" padding>
-  <h4>
-    Latitude:&emsp;&emsp;&emsp;&emsp;35.98651993
-  </h4>
-  <h4>
-    Longitude:&emsp;&emsp;&emsp;-94.0569439
-  </h4>
-  <h4>
-    Altitude:&emsp;&emsp;1516 Ft
-  </h4>
-  <br>
-  <button ion-button style="color:black" round>Copy POS</button>
-  <button ion-button style="color:black" round>Share POS</button>
-  <br>
-  <h4>
-    Speed:&emsp;&emsp;&emsp;&nbsp;0 MPH
-  </h4>
-  <h4>
-    Bearing:&emsp;&emsp;&nbsp;&nbsp;274 degree
-  </h4>
-  <h4>
-    Distance:&emsp;&emsp;0.016 MILES
-  </h4>
-  <br>
-    <ion-item no-lines>
-      <ion-label>Log Tracks</ion-label>
-      <ion-toggle [(ngModel)]="logtracks" checked="true" class="myClass"></ion-toggle>
-    </ion-item>
 
-    <ion-item no-lines>
-      <ion-label color="dark">Show Tracks</ion-label>
-      <ion-toggle [(ngModel)]="showtracks" checked="true" class="myClass"></ion-toggle>
-    </ion-item>
-  
-  <br>
-  <br>
-  <button ion-button style="color:black" round>Clear</button>
-  <button ion-button style="color:black" round>Satelites</button>
+  <div class="left">
+    <p>&ensp;Latitude:</p>
+    <p>&ensp;Longitude:</p>
+    <p>&ensp;Altitude:</p>
+    <p>&ensp;Speed:</p>
+    <p>&ensp;Bearing:</p>
+  </div>
+  <div class="right">
+    <p>{{ lat }}</p>
+    <p>{{ lng }}</p>
+    <p>{{ alt }}</p>
+    <p>{{ spd }}</p>
+    <p>{{ brg }}</p>
+  </div>
 
+  <br>
+  <br>
+  <ion-item no-lines>
+    <ion-label color="dark">Satellites</ion-label>
+    <ion-toggle [(ngModel)]="satellites" checked="true" class="myClass"></ion-toggle>
+  </ion-item>
+  <br>
+  <br>
+  <div class="satdat"></div>
 </ion-content>

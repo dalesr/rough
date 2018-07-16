@@ -10,79 +10,19 @@
 
   <ion-list radio-group [(ngModel)]="latlong">
     <ion-list-header>
-      Lat/Long Format:
+      <strong>Lat/Long Format:</strong>
     </ion-list-header>
+    <span class="latBorder"></span>
     <ion-item no-lines>
-      <ion-label>35.98651900&emsp;-94.05674376</ion-label>
+      <ion-label><strong>Lat/Lng:</strong> {{ nlat }}&emsp;{{ nlng }}</ion-label>
       <ion-radio value="latlong1"></ion-radio>
     </ion-item>
     <ion-item no-lines>
-      <ion-label>N35&deg; 59.191' &emsp; W94&deg; 3.405'</ion-label>
+      <ion-label><strong>DD:</strong> N35&deg; 59.191' &emsp; W94&deg; 3.405'</ion-label>
       <ion-radio value="latlong2"></ion-radio>
     </ion-item>
     <ion-item>
-      <ion-label>N35&deg; 59' 11.5"&emsp; W94&deg; 3' 24.3"</ion-label>
+      <ion-label><strong>DMS:</strong> N35&deg; 59' 11.5"&emsp; W94&deg; 3' 24.3"</ion-label>
       <ion-radio value="latlong3"></ion-radio>
     </ion-item>
   </ion-list>
-
-  <ion-list radio-group [(ngModel)]="speedpt">
-    <ion-list-header>
-      Show:
-    </ion-list-header>
-    <ion-item no-lines>
-      <ion-label>Speed</ion-label>
-      <ion-radio value="speedpt1"></ion-radio>
-    </ion-item>
-    <ion-item no-lines>
-      <ion-label>Pace</ion-label>
-      <ion-radio value="speedpt2">
-      </ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Time</ion-label>
-      <ion-radio value="speedpt3">
-      </ion-radio>
-    </ion-item>
-  </ion-list>
-
-  <ion-list radio-group [(ngModel)]="unitmeasure">
-    <ion-list-header>
-      Unit of Measure:
-    </ion-list-header>
-    <ion-item no-lines>
-      <ion-label>Kilometer(km)</ion-label>
-      <ion-radio value="unitmeasure1"></ion-radio>
-    </ion-item>
-    <ion-item no-lines>
-      <ion-label>Mile(Mi)</ion-label>
-      <ion-radio value="unitmeasure2">
-      </ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Nautical Mile(nm)</ion-label>
-      <ion-radio value="unitmeasure3">
-      </ion-radio>
-    </ion-item>
-  </ion-list>
-
-  <ion-list radio-group [(ngModel)]="loginter">
-    <ion-list-header>
-      Logging Interval:
-    </ion-list-header>
-    <ion-item no-lines>
-      <ion-label>1 Second</ion-label>
-      <ion-radio value="loginter1"></ion-radio>
-    </ion-item>
-    <ion-item no-lines>
-      <ion-label>10 Second</ion-label>
-      <ion-radio value="loginter2">
-      </ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>1 Minute</ion-label>
-      <ion-radio value="loginter3">
-      </ion-radio>
-    </ion-item>
-  </ion-list>
-</ion-content>

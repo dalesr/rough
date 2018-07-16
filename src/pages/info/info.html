@@ -20,14 +20,13 @@
     <p>{{ spd }}</p>
     <p>{{ brg }}</p>
   </div>
-
   <br>
-  <br>
+  <br> 
   <ion-item no-lines>
     <ion-label color="dark">Satellites</ion-label>
     <ion-toggle [(ngModel)]="satellites" checked="true" class="myClass"></ion-toggle>
   </ion-item>
+  <span class="satBorder"></span>
   <br>
-  <br>
-  <div class="satdat"></div>
+  <div class="satdat">Insert Satellite data here and bind to toggle switch.</div>
 </ion-content>

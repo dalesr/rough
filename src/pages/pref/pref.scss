@@ -1,19 +1,28 @@
 page-pref {
+
     .list-header{
+        font-size: 1.25em;
+        color: black;
+    }
+
+    .latBorder{
         display: block;
-        font-size: 1.5em;
         margin-top: 10px;
         margin-bottom: 0;
         margin-left: 10px;
         margin-right: 0;
-        color: black;
         padding-top: -5px;
         padding-bottom: -10px;
-        border-top: none;
-        border-left: outset #273746;
         border-bottom: outset #273746;
-        border-radius: 25px;
-        width: 250px;
+        border-top: none;
+        width: 365px;
     }
     
+    .text{
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

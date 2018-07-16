@@ -22,7 +22,7 @@ export class HomePage {
  
   positionSubscription: Subscription;
  
-  constructor(public navCtrl: NavController, private plt: Platform, private geolocation: Geolocation, private storage: Storage) { }
+  constructor(public navCtrl: NavController, private plt: Platform, private geo: Geolocation, private storage: Storage) { }
  
   ionViewDidLoad() {
     this.plt.ready().then(() => {
@@ -37,7 +37,7 @@ export class HomePage {
       }
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
  
-      this.geolocation.getCurrentPosition().then(pos => {
+      this.geo.getCurrentPosition().then(pos => {
         let latLng = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
         this.map.setCenter(latLng);
         this.map.setZoom(16);
@@ -59,7 +59,7 @@ export class HomePage {
     this.isTracking = true;
     this.trackedRoute = [];
  
-    this.positionSubscription = this.geolocation.watchPosition()
+    this.positionSubscription = this.geo.watchPosition()
       .pipe(
         filter((p) => p.coords !== undefined) //Filter Out Errors
       )

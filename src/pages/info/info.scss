@@ -1,7 +1,7 @@
 page-info {
     .label{
         display: block;
-        font-size: 1.17em;
+        font-size: 1.25em;
         margin-top: .75em;
         margin-bottom: .75em;
         margin-left: 0;
@@ -9,13 +9,31 @@ page-info {
         font-weight: bold;
     }
 
+    .satBorder{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 0;
+        padding-top: -5px;
+        padding-bottom: -10px;
+        border-bottom: outset #273746;
+        border-top: none;
+    }
+    
     .left {
         width: 50%;
         float: left;
+        font-size: 1.25em;
+        color: black;
+        font-weight: bold;
     }
 
     .right {
         width: 50%;
         float: right;
+        font-size: 1.25em;
+        // color: black;
+        // font-weight: bold;
     }
 }
